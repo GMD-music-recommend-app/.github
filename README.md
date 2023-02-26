@@ -101,4 +101,4 @@
   + [박희원](https://github.com/hw130) 
   + [정조은](https://github.com/joeun-01)
 * UX/UI
-  + 유진아
+  + [유진아](mailto:jinahyu210@gachon.ac.kr)
