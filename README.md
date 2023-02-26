@@ -9,18 +9,47 @@
 <br>
 
 ## 🏆 <I>What?</I> :: 화면 및 기능<br>
+
 > ### 주요 기능
 > * 위치를 기반으로 음악 추천<br>
 > * 음악 정보 확인 및 음악 듣기<br>
 > * 추천 음악 별 댓글 및 공감하기<br>
 > * 지역 별 인기 차트 제공<br>
 > ### 화면 및 기능 설명
-> <details><summary>1. 메인 화면</summary>
-> 지도위에 생성된 음악 핀을 통해 내 위치 주변에서 생성된 음악 정보 확인 가능</details>
-> <details><summary>2. 음악 추천하기</summary>
-> 음악 추천하기 시퀀스</details>
-> <details><summary>3. 음악 핀 클릭 화면</summary>
-> 음악 추천하기 시퀀스</details>
+> <details>
+> <summary>1. 메인 화면</summary>
+> <img src="https://user-images.githubusercontent.com/92194918/221408397-dd19e300-04d5-4979-80e2-f455bd79976e.gif" width="240"/><br>
+> <ul> 
+> <li><b>지도 위에 생성된 음악 핀을 통해 내 위치 주변에서 생성된 음악 정보를 확인할 수 있습니다.</b></li>
+> <li>Splash에서 FusedLocation을 통해 유저의 현재 위치 정보를 가져와 MainActivity로 전달합니다.</li>
+> <li>MainActivity에서 전달받은 위치 정보를 VieModel의 LiveData에 저장 후<br> ViewModel의 Observer를 통해 LiveData를 감지하여 해당 위치 정보를 기준으로 지도 화면을 표시합니다.</li>
+> <li>LiveData에 저장 된 위치 정보를 기준으로 반경 5km 내에 생성 된 음악 핀 데이터를 Coroutine 통해 비동기적으로 가져옵니다.</li>
+> </ul>
+> </details>
+> <details>
+> <summary>2. 추천 음악 정보 화면</summary>
+> <img src="https://user-images.githubusercontent.com/92194918/221409122-a93723d2-a67d-45e8-ae72-fd12e5a1b14a.gif" width="240">
+> <img src="https://user-images.githubusercontent.com/92194918/221409319-3f15645a-815e-40f5-9d53-7316305259ec.gif" width="240"/><br>
+> <ul>
+> <li><b>지도 위에 생성된 음악 핀을 클릭하면 해당 장소에서 추천된 음악의 정보를 확인할 수 있습니다.</b></li>
+> <li>'ReadMoreTextView' 라이브러리를 사용하여 사연이 2줄 이상일 경우 더보기 클릭 시 전체 텍스트가 표시되도록 구현했습니다.</li>
+> <li>앨범 이미지의 유튜브 버튼을 클릭하면 해당 음악의 "가수 곡 제목"을 검색한 유튜브 화면으로 이동합니다.</li>
+> <li>우측 상단의 아이콘은 본인 생성 여부, 공감하기, 공유하기 버튼이며 추후 구현 예정입니다.</li>
+> </ul>
+> </details>
+> <details>
+> <summary>3. 음악 추천하기</summary>
+> <img src="https://user-images.githubusercontent.com/92194918/221411387-e3c4104b-7729-4e47-bf41-35e0b7a12249.gif" width="240">
+> <img src="https://user-images.githubusercontent.com/92194918/221411240-71db16af-92db-4bc4-9e54-ee71f23884e5.gif" width="240">
+> <img src="https://user-images.githubusercontent.com/92194918/221411662-3435fe31-6919-42c4-bbb7-fd782c771798.gif" width="240">
+> <img src="https://user-images.githubusercontent.com/92194918/221412025-374e2740-3d11-49cc-891f-8fe732f10c2f.gif" width="240"/><br>
+> <ul>
+> <li><b>장소 선택부터 사연 입력까지 음악 추천하기 기능의 일련의 과정입니다.</b></li>
+> <li>'다른 위치에서 추천하기' 클릭 시 첫 번째 화면부터 시작하며 현재 위치에서 추천하기 시 두 번째 화면에서 시작하게 됩니다.</li>
+> <li>Fragment 전환 이후에도 추천 위치, 선택한 음악의 데이터를 보존하기 위해 'activityViewModels'를 사용하여 데이터를 유지하도록 했습니다. </li>
+> <li>음악 검색화면에서 음악 데이터는 'ManiaDB API'를 사용하여 음악 정보를 가져오도록 했습니다.</li>
+> </ul>
+> </details>
 
 <br>
 
