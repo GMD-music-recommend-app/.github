@@ -50,6 +50,14 @@
 > <li>음악 검색화면에서 음악 데이터는 'ManiaDB API'를 사용하여 음악 정보를 가져오도록 했습니다.</li>
 > </ul>
 > </details>
+> <details>
+> <summary>4. 지뭐듣 차트</summary>
+> <img src="https://user-images.githubusercontent.com/92194918/221413642-fb41f8da-7f7d-4456-ad68-9fdee9f007eb.png" width="240"/><br>
+> <ul> 
+> <li><b>사용자의 현재 위치(행정구역)를 기준으로 해당 지역에서 공감을 많이 받은 상위 10개의 음악을 표시합니다.</b></li>
+> <li>추후 구현 예정입니다.</li>
+> </ul>
+> </details>
 
 <br>
 
