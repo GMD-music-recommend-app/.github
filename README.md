@@ -22,7 +22,7 @@
 > <ul> 
 > <li><b>지도 위에 생성된 음악 핀을 통해 내 위치 주변에서 생성된 음악 정보를 확인할 수 있습니다.</b></li>
 > <li>Splash에서 FusedLocation을 통해 유저의 현재 위치 정보를 가져와 MainActivity로 전달합니다.</li>
-> <li>MainActivity에서 전달받은 위치 정보를 VieModel의 LiveData에 저장 후<br> ViewModel의 Observer를 통해 LiveData를 감지하여 해당 위치 정보를 기준으로 지도 화면을 표시합니다.</li>
+> <li>MainActivity에서 전달받은 위치 정보를 ViewModel의 LiveData에 저장 후<br> ViewModel의 Observer를 통해 LiveData를 감지하여 해당 위치 정보를 기준으로 지도 화면을 표시합니다.</li>
 > <li>LiveData에 저장 된 위치 정보를 기준으로 반경 5km 내에 생성 된 음악 핀 데이터를 Coroutine 통해 비동기적으로 가져옵니다.</li>
 > </ul>
 > </details>
